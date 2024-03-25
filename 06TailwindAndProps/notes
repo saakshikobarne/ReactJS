@@ -1,0 +1,42 @@
+Tailwind CSS installation with vite commands:
+
+1. Create project with vite and navigate to the directory
+
+
+2. Install Tailwind CSS
+Install tailwindcss and its peer dependencies, then generate your tailwind.config.js and postcss.config.js files.
+
+>npm install -D tailwindcss postcss autoprefixer
+>npx tailwindcss init -p
+
+
+3. Configure your template paths
+Add the paths to all of your template files in your tailwind.config.js file.
+
+in tailwind.config.js replace the content array with below given content array:
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
+4. Add the Tailwind directives to your CSS
+Add the @tailwind directives for each of Tailwind’s layers to your ./src/index.css file.
+
+in index.css add on top: 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+5. Run build process:
+>npm run dev

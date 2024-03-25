@@ -1,0 +1,39 @@
+The question of creating a counter application is asked many times in a react interview
+
+when we update the counter, and add value to the counter using the setCounter function like:
+
+const [counter, setCounter] = useState(0);
+
+const addVal =()=>{
+    setCounter= (counter+1);
+}
+
+the interviewer may ask a follow up like:
+
+if we update the value of counter in a single function multiple times like:
+
+const addVal =()=>{
+    setCounter= (counter+1);
+    setCounter= (counter+1);
+    setCounter= (counter+1);
+    setCounter= (counter+1);
+}
+
+will the value be updated more than by one or just by one?
+
+The answer is, the value will be updated just by one and not more than that at a single time.
+
+This is because of the useState() in react
+
+because useState() in react sends the updates in the UI or variables in batches.
+So, sending the same update:
+setCounter= (counter+1);
+multiple times is sent in a single batch and thus it is counted as a single operation.
+
+Still, if there is a situation in which we have to update the conuter more than once, then we can still do it like:
+
+setCounter= ((prevCounter) => prevCounter+1 )
+
+This method fetches the previous state and updates it, this is done by using callback.
+
+

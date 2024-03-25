@@ -1,0 +1,32 @@
+gitignore: this file contains the files that should be ignored by git while pushing the codebase to github
+
+package-lock.json: this file is similar to package.json file but here, the dependancies are locked
+    for a particular version (only works for particular version)
+    In other words, stable version of dependancies is locked here.
+
+readme.md: is an introduction file of the project where all the project details are documented
+
+inside the public folder (when apps are created using create-react-app)
+manifest file: is useful for mobile devices when we open the websites in mobile phones
+robots.txt: is for the search engine
+
+
+
+Some rules to follow while writing react code:
+(in vite)
+
+files should have extensions of .jsx
+function name (also referred to as component in react) should always start from capital letter
+while returning the components, we can return only one component from the function
+when in stituations we have to return more than just one component we would wrap all the components in a div 
+to avoid using many divs, react provided with an option to return empty fragments for wrapping up the content
+these <></> are called as fragments.
+
+
+(using create-react-app) 
+if the practises of capitalization of the function names and tags is not followed,
+unlike in vite which throws an error, this method does not render the object instead of generating any error
+
+NOTE: functions which we are exporting and importing are the components itself
+
+

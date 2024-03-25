@@ -1,0 +1,39 @@
+Threre are several ways to create react apps:
+
+
+1. By create react app method
+navigate to the folder
+>npx create-react-app appname
+
+creating react app by this process is a slow process as it installes bulky libraries which may not be even needed
+
+When installed, there is a file called `package.json` which has all the information related to the react dependancies.
+
+to run the react code, we shall execute the following command:
+>npm run start
+
+
+2. since the create react app is a bulky method and a slow process, we will use the second method:
+
+to create a react app using vite, first navigate to the folder 
+>npm create vite@latest
+
+fill in the project name
+select the framework (react+js)
+
+this method doesn't provide node modules as in the create react app method
+
+since the node modules folder is not present in this case, to run the project, we have to install it first
+so to install, first navigate to the project folder and
+>npm i 
+or
+>npm install
+
+now, the required packages would be installed with that
+
+to run the project now, 
+>npm run dev
+
+
+
+
